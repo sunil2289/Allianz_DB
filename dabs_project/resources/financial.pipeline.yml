@@ -1,0 +1,14 @@
+resources:
+  pipelines:
+    pipeline_financial_pipeline:
+      name: financial
+      libraries:
+        - glob:
+            include: /Workspace/Users/sunil2289@gmail.com/allianz/dabs_project/src/financial/transformations/**
+      schema: bronze
+      photon: true
+      catalog: ${var.catalog}
+      serverless: true
+      root_path: /Workspace/Users/sunil2289@gmail.com/allianz/dabs_project/src/financial
+      configuration:
+        catalog: ${var.catalog}
